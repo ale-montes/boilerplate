@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';  // Importa CommonModule
+import { CommonModule } from '@angular/common';
 import { HealthService } from '../services/health.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { HealthService } from '../services/health.service';
     <h2>Estado del backend</h2>
     <p *ngIf="mensaje">{{ mensaje }}</p>
   `,
-  imports: [CommonModule],  // Asegúrate de agregar CommonModule aquí
+  imports: [CommonModule],
 })
 export class HealthComponent implements OnInit {
   mensaje = '';
