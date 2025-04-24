@@ -1,59 +1,87 @@
-# Frontend
+# Boilerplate Angular + Node.js – Verificación de Salud del Backend 🚗
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.9.
+Este proyecto es un **boilerplate** básico que sirve como punto de partida para desarrollar aplicaciones full stack con un frontend en **Angular standalone** y un backend en **Node.js/Express**. Incluye un ejemplo funcional de conexión entre ambos mediante una verificación de salud de la API.
 
-## Development server
+## 🧱 Tecnologías utilizadas
 
-To start a local development server, run:
+- Frontend: Angular 17+ (Standalone Components)
+- Backend: Node.js + Express
+- Comunicación HTTP con `HttpClient` (usando `provideHttpClient()`)
 
-```bash
-ng serve
-```
+---
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 📁 Estructura del Proyecto
 
-## Code scaffolding
+<pre> 
+/frontend
+└── src/app
+    ├── components/health.component.ts        # Componente para estado del backend
+    ├── services/health.service.ts           # Servicio HTTP
+    ├── app.component.ts / html / css        # Componente principal
+    ├── app.config.ts                        # Configuración inicial
+    ├── app.routes.ts                        # Rutas del frontend
+    └── main.ts                              # Bootstrap con provideHttpClient
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+/backend
+└── src
+    ├── config/env.ts                        # Variables de entorno
+    ├── controllers/health.controller.ts     # Lógica de ruta /api/health
+    ├── middlewares/notFound.middleware.ts   # Middleware de ruta no encontrada
+    ├── models/                              # Carpeta para modelos de datos
+    ├── routes/index.ts                      # Router principal
+    ├── services/                            # Carpeta para servicios de negocio
+    ├── app.ts                               # Configuración de Express
+    └── server.ts                            # Inicialización del servidor
+</pre>
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🚀 Cómo ejecutar el proyecto
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+### 1. Clonar el repositorio
 
 ```bash
-ng e2e
+git clone https://github.com/ale-montes/boilerplate.git
+cd boilerplate
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+### 2. Backend
 
-## Additional Resources
+```bash
+cd backend
+npm install
+npm start
+```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Esto inicia un servidor en `http://localhost:3000/api/health`
+
+### 3. Frontend
+
+```bash
+cd frontend
+npm install
+npm start
+```
+
+Esto inicia el frontend en `http://localhost:4200` (o el puerto que Vite defina)
+
+---
+
+## 🔗 Rutas importantes
+
+- `GET /api/health` → Verifica el estado del backend
+- `http://localhost:4200/health` → Página del frontend que muestra el estado
+
+---
+
+## 📦 TODOs y mejoras
+
+- [ ] Agregar autenticación
+- [ ] Implementar tests unitarios y e2e
+- [ ] Despliegue con Docker
+
+---
+
+## 🧑‍💻 Autor
+
+- Hecho con ❤️ por [Ale Montes](https://github.com/ale-montes)
