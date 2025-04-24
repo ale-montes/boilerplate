@@ -1,4 +1,4 @@
-# Boilerplate Angular + Node.js – Verificación de Salud del Backend 🚗
+# Boilerplate Angular + Node.js 🚗
 
 Este proyecto es un **boilerplate** básico que sirve como punto de partida para desarrollar aplicaciones full stack con un frontend en **Angular standalone** y un backend en **Node.js/Express**. Incluye un ejemplo funcional de conexión entre ambos mediante una verificación de salud de la API.
 
@@ -41,8 +41,8 @@ Este proyecto es un **boilerplate** básico que sirve como punto de partida para
 ### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/ale-montes/boilerplate.git
-cd boilerplate
+git clone https://github.com/ale-montes/frontend.git
+cd frontend
 ```
 
 ### 2. Backend
