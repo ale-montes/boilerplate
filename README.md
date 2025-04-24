@@ -12,16 +12,27 @@ Este proyecto es un **boilerplate** básico que sirve como punto de partida para
 
 ## 📁 Estructura del Proyecto
 
-```
+<pre> 
 /frontend
-  ├── src/app/components/health.component.ts   // Componente que consulta al backend
-  ├── src/app/services/health.service.ts       // Servicio HTTP para health-check
-  ├── src/main.ts                              // Bootstrap con provideHttpClient
-  └── ...
+└── src/app
+    ├── components/health.component.ts        # Componente para estado del backend
+    ├── services/health.service.ts           # Servicio HTTP
+    ├── app.component.ts / html / css        # Componente principal
+    ├── app.config.ts                        # Configuración inicial
+    ├── app.routes.ts                        # Rutas del frontend
+    └── main.ts                              # Bootstrap con provideHttpClient
 
 /backend
-  └── index.js (o app.js)                      // API REST con ruta /api/health
-```
+└── src
+    ├── config/env.ts                        # Variables de entorno
+    ├── controllers/health.controller.ts     # Lógica de ruta /api/health
+    ├── middlewares/notFound.middleware.ts   # Middleware de ruta no encontrada
+    ├── models/                              # Carpeta para modelos de datos
+    ├── routes/index.ts                      # Router principal
+    ├── services/                            # Carpeta para servicios de negocio
+    ├── app.ts                               # Configuración de Express
+    └── server.ts                            # Inicialización del servidor
+</pre>
 
 ---
 
